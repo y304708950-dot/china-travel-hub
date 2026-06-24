@@ -7,11 +7,13 @@ services:
     buildCommand: pip install -r requirements.txt && mkdocs build
     staticPublishPath: ./site
     pullRequestPreviewsEnabled: true
+    # Render 静态站点默认不自动把 /path/ 定向到 /path/index.html
+    # 用 rewrite 规则让无后缀路径回退到 index.html（MkDocs 生成的目录结构必需）
+    routes:
+      - type: rewrite
+        source: /:path*/
+        destination: /:path*/index.html
     headers:
       - path: /*
         name: X-Frame-Options
         value: SAMEORIGIN
-    routes:
-      - type: redirect
-        source: /home
-        destination: /
