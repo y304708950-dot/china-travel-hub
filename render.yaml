@@ -2,7 +2,7 @@ services:
   - type: web
     name: china-travel-hub
     runtime: static
-    repo: https://github.com/yuan/china-travel-hub
+    repo: https://github.com/y304708950-dot/china-travel-hub
     branch: main
     buildCommand: pip install -r requirements.txt && mkdocs build
     staticPublishPath: ./site

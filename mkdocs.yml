@@ -4,7 +4,7 @@ site_author: China Travel Hub Team
 site_url: https://china-travel-hub.onrender.com
 
 repo_name: GitHub
-repo_url: https://github.com/yuan/china-travel-hub
+repo_url: https://github.com/y304708950-dot/china-travel-hub
 
 docs_dir: docs
 site_dir: site
@@ -81,7 +81,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/yuan/china-travel-hub
+      link: https://github.com/y304708950-dot/china-travel-hub
   generator: false
 
 nav:
