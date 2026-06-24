@@ -1,0 +1,108 @@
+site_name: China Travel Hub · 战略方案
+site_description: 外国人来华旅行信息站 · 完整战略与执行方案
+site_author: China Travel Hub Team
+site_url: https://china-travel-hub.onrender.com
+
+repo_name: GitHub
+repo_url: https://github.com/yuan/china-travel-hub
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换暗黑模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换亮色模式
+  font:
+    text: Noto Sans SC
+    code: JetBrains Mono
+  icon:
+    logo: material/airplane
+  favicon: assets/favicon.png
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search:
+      lang:
+        - en
+        - ja
+  - tags
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yuan/china-travel-hub
+  generator: false
+
+nav:
+  - 首页: index.md
+  - 战略认知:
+    - 核心战略与五大杠杆: strategy.md
+  - 市场与竞品:
+    - 市场分析: market.md
+    - 竞品分析: competitors.md
+  - 产品设计:
+    - 内容矩阵: product.md
+    - 工具与社区: tools.md
+  - 商业模式:
+    - 变现体系: business.md
+    - 财务预测: finance.md
+  - 运营策略:
+    - 内容与SEO: operations.md
+    - 多渠道分发: channels.md
+  - 落地执行:
+    - 实施路线图: roadmap.md
+    - 风险与避坑: risks.md
+    - 执行清单: checklist.md
+  - 附录:
+    - 评审报告要点: audit.md

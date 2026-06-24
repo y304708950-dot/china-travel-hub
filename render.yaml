@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: china-travel-hub
+    runtime: static
+    repo: https://github.com/yuan/china-travel-hub
+    branch: main
+    buildCommand: pip install -r requirements.txt && mkdocs build
+    staticPublishPath: ./site
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+    routes:
+      - type: redirect
+        source: /home
+        destination: /
